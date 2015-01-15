@@ -1,0 +1,14 @@
+{
+  "name": "endtheauction.com",
+  "version": "1.0.0",
+  "description": "endtheauction.com website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valet-io/endtheauction.com.git"
+  },
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://bendrucker.me)",
+  "bugs": {
+    "url": "https://github.com/valet-io/endtheauction.com/issues"
+  },
+  "homepage": "http://endtheauction.com"
+}
