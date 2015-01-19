@@ -10,5 +10,12 @@
   "bugs": {
     "url": "https://github.com/valet-io/endtheauction.com/issues"
   },
-  "homepage": "http://endtheauction.com"
+  "homepage": "http://endtheauction.com",
+  "devDependencies": {
+    "bluebird": "~2.8.0",
+    "glob": "~4.3.5",
+    "gray-matter": "~1.1.2",
+    "gulp": "~3.8.10",
+    "xtend": "~4.0.0"
+  }
 }
