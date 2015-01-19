@@ -1,0 +1,26 @@
+<header>
+  {{> header}}
+  {{content 'subheader.md'}}
+</header>
+<section>
+  {{content 'introduction.md'}}
+  <div class="email-sign-up">
+    <small>Launching February 2</small>
+    <input type="email" placeholder="Email address" />
+    <button class="success">Sign Up</button>
+  </div>
+  {{#each posts}}
+  <div class="post-preview">
+    <div class="post-date">
+      <span class="post-date-month"></span>
+      <span class="post-date-date"></span>
+    </div>
+    <div class="post-preview-content">
+      <header>
+        <h2>{{title}}</h2>
+      </header>
+      <p>{{teaser}}</p>
+    </div>
+  </div>
+  {{/each}}
+</section>

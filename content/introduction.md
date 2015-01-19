@@ -1,0 +1,3 @@
+If you’re a development director, event planner, nonprofit board member who has ever planned a fundraising auction, you’re going to want to hear what we have to say. We’ll start at the end: **fundraising auctions are broken**. Special events help build strong relationships with both existing and prospective donors. Auctions are preventing your events from reaching their full potential.
+
+We’re assembling data and insights from nonprofit events to help make 2015 the year you choose to try something new and replace your auction. Sign up below to receive every article in your inbox the moment it’s published.
