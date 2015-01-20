@@ -13,9 +13,13 @@
   "homepage": "http://endtheauction.com",
   "devDependencies": {
     "bluebird": "~2.8.0",
+    "event-stream": "~3.2.1",
     "glob": "~4.3.5",
     "gray-matter": "~1.1.2",
     "gulp": "~3.8.10",
+    "handlebars": "~2.0.0",
+    "handlebars-helper-md": "~0.2.0",
+    "marked": "~0.3.2",
     "xtend": "~4.0.0"
   }
 }

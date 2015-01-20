@@ -7,15 +7,10 @@ var extend  = require('xtend');
 exports.all = function posts () {
   return glob('posts/*.md')
     .map(function (file) {
-      return fs.readFileAsync(file);
+      return fs.readFileAsync(file).call('toString');
     })
-    .map(toString)
     .map(parse)
     .map(cast);
-}
-
-function toString (buffer) {
-  return buffer.toString();
 }
 
 function parse (data) {
