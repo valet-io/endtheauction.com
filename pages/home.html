@@ -21,10 +21,10 @@
     <button class="success">Sign Up</button>
   </div>
   {% for post in posts %}
-  <div class="post-preview">
+  <div class="post-preview {% if !post.published %}unpublished{% endif %}">
     <div class="post-date">
-      <span class="post-date-month"></span>
-      <span class="post-date-date"></span>
+      <span class="post-date-month">{{post.date | date('M')}}</span>
+      <span class="post-date-date">{{post.date | date('j')}}</span>
     </div>
     <div class="post-preview-content">
       <header>
