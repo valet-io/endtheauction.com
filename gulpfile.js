@@ -1,23 +1,31 @@
-var gulp      = require('gulp');
-var Promise   = require('bluebird');
-var posts     = require('./tasks/posts');
-var templates = require('./tasks/templates');
+'use strict';
 
-require('./tasks/helpers');
+var gulp    = require('gulp');
+var Promise = require('bluebird');
+var file    = require('./lib/file');
+var posts   = require('./lib/posts');
+var swig    = Promise.promisifyAll(require('swig'));
 
-gulp.task('prepare', function () {
-  return templates.partials();
-});
+require('swig-marked').useTag(swig);
 
-gulp.task('home', ['prepare'], function () {
+gulp.task('home', function () {
   return Promise.join(
-    templates.get('home'),
-    posts.all()
+    posts.get(),
+    compile('./pages/home.html')
   )
-  .spread(function (template, posts) {
+  .spread(function (posts, template) {
     return template({
       posts: posts
     });
   })
-  .tap(console.log)
+  .tap(console.log);
 });
+
+gulp.task('posts', ['partials'], function () {
+  return posts.get()
+    .pipe(gulp.dest('build'));
+});
+
+function compile (path) {
+  return swig.compileFileAsync(path, null);
+}
